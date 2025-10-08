@@ -38,20 +38,18 @@ function scrollActive() {
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 350;
-    sectionId = current.getAttribute("id");
+    const sectionId = current.getAttribute("id");
 
+    const link = document.querySelector('.nav__menu a[href*="' + sectionId + '"]');
+    if (!link) return;
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
+      link.classList.add("active-link");
     } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
+      link.classList.remove("active-link");
     }
   });
 }
-window.addEventListener("scroll", scrollActive);
+window.addEventListener("scroll", scrollActive, { passive: true });
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
@@ -60,7 +58,7 @@ function scrollHeader() {
   if (this.scrollY >= 80) nav.classList.add("scroll-header");
   else nav.classList.remove("scroll-header");
 }
-window.addEventListener("scroll", scrollHeader);
+window.addEventListener("scroll", scrollHeader, { passive: true });
 
 /*==================== SHOW SCROLL UP ====================*/
 function scrollUp() {
@@ -69,7 +67,36 @@ function scrollUp() {
   if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
   else scrollUp.classList.remove("show-scroll");
 }
-window.addEventListener("scroll", scrollUp);
+window.addEventListener("scroll", scrollUp, { passive: true });
+
+/*==================== REVEAL ON SCROLL ====================*/
+(function setupReveal() {
+  if (typeof IntersectionObserver === 'undefined') return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal--visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+})();
+
+/* Stagger project cards */
+(function staggerProjects() {
+  const container = document.querySelector('#projects .container');
+  if (!container) return;
+  const cards = container.querySelectorAll('.project__card');
+  cards.forEach((card, idx) => {
+    card.style.transitionDelay = `${idx * 80}ms`;
+  });
+})();
 
 /*==================== DARK LIGHT THEME ====================*/
 

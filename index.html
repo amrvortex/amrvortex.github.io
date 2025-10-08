@@ -4,6 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amr Ibrahem – Software Engineer building scalable, reliable systems. View selected projects, skills, and contact information.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Amr Ibrahem – Software Engineer">
+    <meta property="og:description" content="Selected projects, focus areas, and contact details.">
+    <meta property="og:url" content="https://amrvortex.github.io/">
+    <meta property="og:image" content="https://amrvortex.github.io/assets/img/3.jpeg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Amr Ibrahem – Software Engineer">
+    <meta name="twitter:description" content="Selected projects, focus areas, and contact details.">
+    <meta name="twitter:image" content="https://amrvortex.github.io/assets/img/3.jpeg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://amrvortex.github.io/">
+
+    <!-- Performance: Preconnect to font and icon hosts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unicons.iconscout.com" crossorigin>
 
     <!--==================== UNICONS ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -32,6 +54,21 @@
                         </a>
                     </li>
                     <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-code-branch nav__icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class="uil uil-browser nav__icon"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class="uil uil-message nav__icon"></i> Contact me
                         </a>
@@ -54,27 +91,27 @@
     <main class="main">
         <!--==================== HOME ====================-->
         <section class="home section" id="home">
-            <div class="home__container container grid">
+            <div class="home__container container grid reveal">
                 <div class="home__content grid">
                     <div class="home__social">
-                        <a href=https://www.linkedin.com/in/amr-ibrahem-360aaa245/" target="_blank"
+                        <a href="https://www.linkedin.com/in/amr-ibrahem-360aaa245/" target="_blank" rel="noopener noreferrer"
                             class="home__social-icon">
                             <i class="uil uil-linkedin"></i>
                         </a>
-                        <a href="https://github.com/amrvortex" target="_blank" class="home__social-icon">
+                        <a href="https://github.com/amrvortex" target="_blank" rel="noopener noreferrer" class="home__social-icon">
                             <i class="uil uil-github"></i>
                         </a>
                     </div>
 
                     <div class="home__img">
-                        <img src="assets/img/3.jpeg" alt="">
+                        <img src="assets/img/3.jpeg" alt="Amr Ibrahem portrait" width="300" height="300" loading="lazy">
                     </div>
 
                     <div class="home__data">
-                        <h1 class="home__title">Hi, I'am Amr</h1>
+                        <h1 class="home__title">Hi, I'm Amr</h1>
                         <h3 class="home__subtitle">Software Engineer</h3>
                         <p class="home__description">Building systems that scale, not just compile  </p>
-                        <a download="" href="assets/pdf/Amr's Resume.pdf" class="button button--flex">
+                        <a download="Amr_Ibrahem_Resume.pdf" href="assets/pdf/Amr%27s%20Resume.pdf" class="button button--flex">
                             Download Resume<i class="uil uil-download-alt button__icon"></i>
                         </a>
                     </div>
@@ -82,19 +119,105 @@
             </div>
         </section>
 
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title reveal">About</h2>
+            <span class="section__subtitle reveal">Who I am</span>
+
+            <div class="container grid">
+                <p class="about__description">I’m a software engineer focused on building reliable, scalable systems. I enjoy solving product problems end-to-end and delivering clean, maintainable code.</p>
+            </div>
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title reveal">Skills</h2>
+            <span class="section__subtitle reveal">Technical expertise</span>
+
+            <div class="container grid">
+                <div class="skills__content">
+                    <div class="skills__group">
+                        <h3 class="skills__title">Frontend</h3>
+                        <div class="skills__list">
+                            <span class="skills__item">HTML5</span>
+                            <span class="skills__item">CSS3</span>
+                            <span class="skills__item">JavaScript</span>
+                            <span class="skills__item">Angular</span>
+                        </div>
+                    </div>
+                    <div class="skills__group">
+                        <h3 class="skills__title">Backend</h3>
+                        <div class="skills__list">
+                            <span class="skills__item">Java</span>
+                            <span class="skills__item">JavaFX</span>
+                            <span class="skills__item">C</span>
+                        </div>
+                    </div>
+                    <div class="skills__group">
+                        <h3 class="skills__title">Database</h3>
+                        <div class="skills__list">
+                            <span class="skills__item">MySQL</span>
+                            <span class="skills__item">Data Structures</span>
+                        </div>
+                    </div>
+                    <div class="skills__group">
+                        <h3 class="skills__title">Tools</h3>
+                        <div class="skills__list">
+                            <span class="skills__item">Git</span>
+                            <span class="skills__item">GitHub</span>
+                            <span class="skills__item">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PROJECTS ====================-->
+        <section class="projects section" id="projects">
+            <h2 class="section__title reveal">Projects</h2>
+            <span class="section__subtitle reveal">Selected work</span>
+
+            <div class="container grid reveal">
+                <div class="project__card">
+                    <h3><a href="https://github.com/amrvortex/Weather-App-using-API--HTML---CSS---JS-" target="_blank" rel="noopener noreferrer">Weather App</a></h3>
+                    <p>City-based weather with dynamic background that changes based on the location and conditions.</p>
+                    <p><strong>Tech:</strong> HTML, CSS, JavaScript, Public Weather API</p>
+                    <div class="project__actions">
+                        <a class="button button--link" href="https://github.com/amrvortex/Weather-App-using-API--HTML---CSS---JS-" target="_blank" rel="noopener noreferrer">View Repo <i class="uil uil-external-link-alt button__icon"></i></a>
+                    </div>
+                </div>
+                <div class="project__card">
+                    <h3><a href="https://github.com/amrvortex/Book_Store---java---javafx---MySQL-" target="_blank" rel="noopener noreferrer">Book Store</a></h3>
+                    <p>Desktop CRUD app for managing books, inventory thresholds, and user emails; includes notifications when stock goes below thresholds.</p>
+                    <p><strong>Tech:</strong> Java, JavaFX, MySQL</p>
+                    <div class="project__actions">
+                        <a class="button button--link" href="https://github.com/amrvortex/Book_Store---java---javafx---MySQL-" target="_blank" rel="noopener noreferrer">View Repo <i class="uil uil-external-link-alt button__icon"></i></a>
+                    </div>
+                </div>
+                <div class="project__card">
+                    <h3><a href="https://github.com/amrvortex/Mail-Server--vue---html---css---js---java-" target="_blank" rel="noopener noreferrer">Mail Server</a></h3>
+                    <p>Send emails between accounts with a custom UI and basic mail features end-to-end.</p>
+                    <p><strong>Tech:</strong> Vue, HTML/CSS/JS, Java</p>
+                    <div class="project__actions">
+                        <a class="button button--link" href="https://github.com/amrvortex/Mail-Server--vue---html---css---js---java-" target="_blank" rel="noopener noreferrer">View Repo <i class="uil uil-external-link-alt button__icon"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Get in touch</span>
+            <h2 class="section__title reveal">Contact Me</h2>
+            <span class="section__subtitle reveal">Get in touch</span>
 
-            <div class="contact__container container grid">
+            <div class="contact__container container grid reveal">
                 <div>
                     <div class="contact__information">
                         <i class="uil uil-phone contact__icon"></i>
 
                         <div>
                             <h3 class="contact__title">Call Me</h3>
-                            <span class="contact__subtitle">01157621162</span>
+                            <a href="tel:+201157621162" class="contact__subtitle">01157621162</a>
                         </div>
                     </div>
 
@@ -103,7 +226,7 @@
 
                         <div>
                             <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle">amrholo444@gmail.com</span>
+                            <a href="mailto:amrholo444@gmail.com" class="contact__subtitle">amrholo444@gmail.com</a>
                         </div>
                     </div>
 
@@ -116,6 +239,24 @@
                         </div>
                     </div>
                 </div>
+                <form class="contact__form" action="https://formsubmit.co/amrholo444@gmail.com" method="POST">
+                    <div class="grid contact__inputs">
+                        <div class="contact__content">
+                            <label for="name" class="contact__label">Name</label>
+                            <input id="name" name="name" type="text" class="contact__input" placeholder="Your name" required>
+                        </div>
+                        <div class="contact__content">
+                            <label for="email" class="contact__label">Email</label>
+                            <input id="email" name="email" type="email" class="contact__input" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="message" class="contact__label">Message</label>
+                        <textarea id="message" name="message" rows="6" class="contact__input" placeholder="How can I help?" required></textarea>
+                    </div>
+                    <button type="submit" class="button button--flex">Send Message <i class="uil uil-message button__icon"></i></button>
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
             </div>
         </section>
     </main>
@@ -126,42 +267,42 @@
             <div class="footer__container container grid">
                 <div>
                     <h1 class="footer__title">AmrO</h1>
-                    <span class="footer__subtitle">Frontend Developer</span>
+                    <span class="footer__subtitle">Software Engineer</span>
                 </div>
 
                 <ul class="footer__links">
                 </ul>
 
                 <div class="footer__socials">
-                    <a href="https://web.facebook.com/amr.king.31337194" target="_blank" class="footer__social">
+                    <a href="https://web.facebook.com/amr.king.31337194" target="_blank" rel="noopener noreferrer" class="footer__social">
                         <i class="uil uil-facebook"></i>
 
                     </a>
 
-                    <a href="https://www.linkedin.com/in/amr-ibrahem-360aaa245/" target="_blank" class="footer__social">
+                    <a href="https://www.linkedin.com/in/amr-ibrahem-360aaa245/" target="_blank" rel="noopener noreferrer" class="footer__social">
                         <i class="uil uil-linkedin"></i>
                     </a>
 
-                    <a href="https://github.com/amrvortex" target="_blank" class="footer__social">
+                    <a href="https://github.com/amrvortex" target="_blank" rel="noopener noreferrer" class="footer__social">
                         <i class="uil uil-github"></i>
                     </a>
                 </div>
             </div>
 
-            <p class="footer__copy">&#169; Vortex. All rights resrved</p>
+            <p class="footer__copy">&#169; Vortex. All rights reserved</p>
         </div>
     </footer>
 
     <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
+    <a href="#home" class="scrollup" id="scroll-up">
         <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
 
     <!--==================== SWIPER JS ====================-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js" defer></script>
 
     <!--==================== MAIN JS ====================-->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
